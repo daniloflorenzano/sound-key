@@ -6,6 +6,7 @@ const url = require('url');
 
 let win;
 
+
 app.on('ready', () => {
 
     console.log('Aplicação iniciada');
