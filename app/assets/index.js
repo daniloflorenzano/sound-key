@@ -1,15 +1,27 @@
-const { ipcRenderer } = require('electron');
+let nameInput = document.querySelector('#name');
 
-const button = document.querySelector('#upload');
+function recorder() {
+    document.addEventListener('keydown', function getKeyPressed() {
+        keyPressed = {
+            key: event.key,
+            keyCode: event.keyCode
+        }
 
-button.addEventListener('click', () => {
+        if (keyPressed.key != null) {
+            document.removeEventListener('keydown', getKeyPressed);
+            console.log(keyPressed);
+        }
 
-    ipcRenderer.send('open-file-dialog');
-})
+    });
+}
 
+function createMacro() {
+    let newMacro = new Macro(
+        nameInput.value,
+        keyPressed.key,
+        keyPressed.keyCode,
+        filePath
+    )
 
-
-ipcRenderer.on('selected-file', function (event, path) {
-
-    console.log('Full path: ', path);
-});
+    console.log(newMacro);
+}
