@@ -14,7 +14,7 @@ const Macros = sequelize.define('macros', {
     allowNull: false
   },
   keyCode: {
-    type: Sequelize.STRING,
+    type: Sequelize.NUMBER,
     allowNull: false
   },
   file_path: {

@@ -1,19 +1,19 @@
 class MacrosController {
 
     // CREATE
-    static async createMacro(req, res) {
-        const data = {
-            name: 'Ranger',
-            key: 'f2',
-            keyCode: '113',
-            file_path: 'uploads/ranger.mp3'
-          };
+    static async create(data) {
+        // const data = {
+        //     name: 'Ranger',
+        //     key: 'f2',
+        //     keyCode: '113',
+        //     file_path: 'uploads/ranger.mp3'
+        //   };
 
         try {
-            const newMacro = await Macros.create(data);
-            console.log(newMacro);
+            const createMacro = await Macros.create(data);
+            console.log(createMacro);
         } catch(error) {
-            
+            console.log(error);
         }
     }
 

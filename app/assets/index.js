@@ -16,12 +16,16 @@ function recorder() {
 }
 
 function createMacro() {
-    let newMacro = new Macro(
-        nameInput.value,
-        keyPressed.key,
-        keyPressed.keyCode,
-        filePath
-    )
+    let newMacro = {
+        name: nameInput.value,
+        key: keyPressed.key,
+        keyCode: keyPressed.keyCode,
+        file_path: filePath
+    }
+    
+
+    MacrosController.create(newMacro)
 
     console.log(newMacro);
+
 }
