@@ -27,7 +27,6 @@ function createMacro() {
     MacrosController.create(newMacro)
 
     console.log(newMacro);
-
 }
 
 

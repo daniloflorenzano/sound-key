@@ -17,6 +17,7 @@ app.on('ready', () => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
+            backgroundThrottling: false,
         }
     });
 
