@@ -1,38 +1,35 @@
-let playButton = document.querySelector('#play-button');
-let stopButton = document.querySelector('#stop-button')
+const { ipcRenderer } = require('electron');
+const iohook = require('iohook');
 
-playButton.addEventListener('click', () => {
-    const get = MacrosController.getAll();
-    get.then(executeMacro);
-})
+
+const get = MacrosController.getAll();
 
 const executeMacro = (dbData) => {
     let macros = JSON.parse(dbData);
 
     console.log(macros);
 
-    document.addEventListener('keydown', function listenKey() {
-        let key = event.key;
-        console.log('event key: ' + key);
+    iohook.on('keydown', function listenKey(event) {
+        let keyCode = event.keycode;
+        console.log(keyCode);
 
-        validateKey(macros, key)
-
-        stopButton.addEventListener('click', () => {
-            document.removeEventListener('keydown', listenKey)
-            console.log('stop listening');
-        })
+        validateKey(macros, keyCode);
     })
+
+    iohook.start();
 }
 
-function validateKey(database, key) {
+get.then(executeMacro);
+
+function validateKey(database, keyCode) {
 
     for (let i = 0; i < database.length; i++) {
 
-        if (database[i].key == key) {
+        if (database[i].keyCode == keyCode) {
             playSound(database[i].file_path)
-            console.log(key)
+            console.log(keyCode)
         } else {
-            console.log('erro');
+            console.log('erro::' + database[i].keyCode);
         }
     }
 }
@@ -40,4 +37,9 @@ function validateKey(database, key) {
 function playSound(filePath) {
     let sound = new Audio(filePath);
     sound.play();
+}
+
+function closePlayWindow() {
+    ipcRenderer.send('closePlayWindow');
+    iohook.stop();
 }

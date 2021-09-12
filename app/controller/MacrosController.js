@@ -1,8 +1,5 @@
-const { resolve } = require("path");
-
 class MacrosController {
 
-    // CREATE
     static async create(data) {
 
         try {
@@ -13,15 +10,13 @@ class MacrosController {
         }
     }
 
-    // READ ALL
     static async getAll() {
         try {
             const all = await Macros.findAll({
-                attributes: ['key', 'file_path']
+                attributes: ['keyCode', 'file_path']
             });
 
             let object = JSON.stringify(all);
-            //console.log(object)
             
             return object;
 
