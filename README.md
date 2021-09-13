@@ -5,9 +5,9 @@
 <p align="center">
   <img alt="Made with Electron" src="https://img.shields.io/badge/made%20with-Electron-%2347848F">
   
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/daniloflorenzano/sonud-key">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/daniloflorenzano/sound-key">
   
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/daniloflorenzano/sonud-key">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/daniloflorenzano/sound-key">
   
   <img alt="License" src="https://img.shields.io/npm/l/express">
 </p>
