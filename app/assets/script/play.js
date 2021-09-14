@@ -7,12 +7,12 @@ const get = MacrosController.getAll();
 const executeMacro = (dbData) => {
     let macros = JSON.parse(dbData);
 
+    console.log('======= MACROS =======');
     console.log(macros);
 
     iohook.on('keydown', function listenKey(event) {
         let keyCode = event.keycode;
-        console.log(keyCode);
-
+        
         validateKey(macros, keyCode);
     })
 
@@ -25,11 +25,14 @@ function validateKey(database, keyCode) {
 
     for (let i = 0; i < database.length; i++) {
 
+        console.log('======= MACROS FOR =======');
+        console.log(database[i]);
+
         if (database[i].keyCode == keyCode) {
             playSound(database[i].file_path)
             console.log(keyCode)
         } else {
-            console.log('erro::' + database[i].keyCode);
+            console.log('======= Erro =======');
         }
     }
 }

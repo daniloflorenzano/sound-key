@@ -4,8 +4,11 @@ const iohook = require('iohook');
 let keyPressed = [];
 
 function recordKeyPressed() {
+    // clean the object
+    keyPressed = []; 
 
     document.addEventListener('keydown', function getKey() {
+        
 
         let key = event.key;
 
