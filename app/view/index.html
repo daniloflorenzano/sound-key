@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../node_modules\material-design-icons-iconfont\dist\material-design-icons.css">
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/form.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
     <title>Sound Key</title>
-</head>
+  </head>
 
-<body class="container">
-    <h1>Sound Key</h1>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Sound Key</span>
+        </div>
+      </nav>
 
-    <input type="text" name="name" id="name">
-    <button id="record-macro" onclick="recordKeyPressed()">Record Macro</button>
-    <button id="upload">Upload</button>
-    <button id="submit" onclick="createMacro()">Submit</button>
+      <h1 class="title">Let's make some keybinds</h1>
+    </header>
 
-    <br>
-    <br>
-    <br>
+    <main class="container">
+      <section class="form">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control name-input  form-button"
+          placeholder="Name of your keybind"
+        />
+        <button
+          id="record-macro"
+          onclick="recordKeyPressed()"
+          class="btn btn-primary record-button form-button"
+        >
+          Record Key
+        </button>
+        <button id="upload" class="btn btn-primary form-button"><span class="material-icons">
+            drive_folder_upload
+            </span></button>
+        <button id="submit" onclick="createMacro()" class="btn btn-success form-button">
+          <span class="material-icons"> done </span>
+        </button>
+      </section>
 
-    <button id="play-button" type="button" class="btn btn-primary" onclick="openPlayWindow()">
+      <br />
+      <br />
+      <br />
+
+      <button
+        id="play-button"
+        type="button"
+        class="btn btn-primary"
+        onclick="openPlayWindow()"
+      >
         Play
-    </button>
+      </button>
+    </main>
+  </body>
 
-</body>
-
-<script src="../assets/script/index.js"></script>
-<script src="../assets/script/upload.js"></script>
-<script src="../assets/script/playWindowRenderer.js"></script>
-<script src="../config/db.js"></script>
-<script src="../controller/MacrosController.js"></script>
-<script src="../model/macros.js"></script>
-
+  <script src="../assets/javascript/index.js"></script>
+  <script src="../assets/javascript/upload.js"></script>
+  <script src="../assets/javascript/playWindowRenderer.js"></script>
+  <script src="../config/db.js"></script>
+  <script src="../controller/MacrosController.js"></script>
+  <script src="../model/macros.js"></script>
 </html>
