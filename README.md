@@ -132,7 +132,7 @@ Danilo Maia Florenzano
 [![Linkedin Badge](https://img.shields.io/badge/-Danilo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/daniloflorenzano/)](https://www.linkedin.com/in/daniloflorenzano/)
 [![Outlook Badge](https://img.shields.io/badge/-daniloflorenzano1@outlook.com-0078D4?style=flat-square&logo=Microsoft-Outlook&logoColor=white&link=mailto:daniloflorenzano1@outlook.com)](mailto:daniloflorenzano1@outlook.com)
 
-👋🏽 [Get in Touch!](Https://www.linkedin.com/in/tgmarinho/)
+👋🏽 [Get in Touch!](Https://www.linkedin.com/in/daniloflorenzano/)
 
 ---
 
