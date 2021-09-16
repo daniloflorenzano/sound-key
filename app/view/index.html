@@ -51,7 +51,7 @@
         <button id="upload" class="btn btn-primary form-button"><span class="material-icons">
             drive_folder_upload
             </span></button>
-        <button id="submit" onclick="createMacro()" class="btn btn-success form-button">
+        <button id="submit" onclick="validateForm()" class="btn btn-success form-button">
           <span class="material-icons"> done </span>
         </button>
       </section>
@@ -71,10 +71,10 @@
     </main>
   </body>
 
+  <script src="../config/db.js"></script>
+  <script src="../model/macros.js"></script>
   <script src="../assets/javascript/index.js"></script>
   <script src="../assets/javascript/upload.js"></script>
   <script src="../assets/javascript/playWindowRenderer.js"></script>
-  <script src="../config/db.js"></script>
   <script src="../controller/MacrosController.js"></script>
-  <script src="../model/macros.js"></script>
 </html>

@@ -1,11 +1,11 @@
-let nameInput = document.querySelector('#name');
-let recordMacroButton = document.querySelector('#record-macro');
 const iohook = require('iohook');
+let recordMacroButton = document.querySelector('#record-macro');
+let nameInput = document.querySelector('#name');
 
 let keyPressed = [];
 
 function recordKeyPressed() {
-  // clean the object
+  // clear the object
   keyPressed = [];
 
   document.addEventListener('keydown', function getKey() {
@@ -37,7 +37,15 @@ function recordKeyPressed() {
   iohook.start();
 }
 
-function createMacro() {
+async function validateForm() {
+  const databaseContent = await Macros.findAll({
+    attributes: ['name', 'key', 'file_path']
+  });
+
+  const keybindsString = JSON.stringify(databaseContent);
+  const keybindsObj = JSON.parse(keybindsString)
+  console.log('Keybindss:', keybindsObj);
+
   let newMacro = {
     name: nameInput.value,
     key: keyPressed[1],
@@ -45,7 +53,26 @@ function createMacro() {
     file_path: filePath,
   };
 
-  MacrosController.create(newMacro);
+  keybindsObj.map((keybind) => {
+    if (keybind.name == newMacro.name) {
+      console.log(':::: Name already in use ::::');
+      return false;
+    } else if (keybind.key == newMacro.key) {
+      console.log(':::: Key already in use ::::');
+      return false;
+    } else if (keybind.file_path == newMacro.file_path) {
+      console.log(':::: Audio already in use ::::');
+      return false;
+    } else if (!filePath.endsWith('.mp3') && !filePath.endsWith('.wav')) {
+      console.log(':::: Please use a MP3 or WAV file ::::')
+      return false;
+    } else { createMacro(newMacro) };
+  })
+}
 
+function createMacro(newMacro) {
+
+  MacrosController.create(newMacro);
   console.log(newMacro);
+  console.log('::::: Keybind Created :::::');
 }
