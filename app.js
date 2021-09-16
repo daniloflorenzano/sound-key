@@ -39,7 +39,9 @@ ipcMain.on('openPlayWindow', () => {
             width: 300,
             height: 200,
             alwaysOnTop: true,
-            frame: true,
+            frame: false,
+            parent: win,
+            modal: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false,
