@@ -18,7 +18,7 @@ const validateForm = async () => {
         data = keybindsObj[i];
     }
 
-    if(
+   if (
         validateName(data, newMacro) == true &&
         validateKey(data, newMacro) == true &&
         validateAudio(data, newMacro) == true &&

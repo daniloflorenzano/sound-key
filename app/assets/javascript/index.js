@@ -41,5 +41,4 @@ function createMacro(data) {
   
   MacrosController.create(data);
   console.log(data);
-  console.log('::::: Keybind Created :::::');
 }
