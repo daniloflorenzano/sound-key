@@ -1,5 +1,5 @@
 {
-  "name": "tocatecla",
+  "name": "Sound Key",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "start": "electron ."
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.1.1",
     "electron": "^12.0.0",
