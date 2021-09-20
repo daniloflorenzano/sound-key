@@ -23,7 +23,10 @@ const validateForm = async () => {
         validateKey(data, newMacro) == true &&
         validateAudio(data, newMacro) == true &&
         validateFileType() == true
-    ) createMacro(newMacro);
+    ) {
+        createMacro(newMacro);
+        generateTable();
+    }
 }
 
 function validateName(data, obj) {
