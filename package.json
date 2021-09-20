@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "sound-key",
+=======
+  "name": "Sound Key",
+>>>>>>> 163a65cf57e42792a3b6fb5a433d0f480febe72b
   "version": "1.0.0",
   "description": "keybind creator to play audio files",
   "main": "app.js",
@@ -8,7 +12,7 @@
     "start": "electron ."
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.1.1",
     "electron": "^12.0.0",
