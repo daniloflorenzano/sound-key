@@ -1,0 +1,24 @@
+.play {
+    text-align: center;
+    margin: 2rem 0 2rem;
+}
+
+.playButton {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.19rem;
+}
+
+.playButton span {
+    font-size: 3.5rem;
+}
+
+.pause {
+    text-align: center;
+    margin-top: calc(35% - 64px);
+}
+
+.playWindowHeader {
+    text-align: center;
+    margin-top: 1rem;
+}

@@ -3,6 +3,8 @@ class MacrosController {
   static async create(data) {
     try {
       const createMacro = await Macros.create(data);
+      console.log('::::: Keybind Created :::::');
+      window.alert('Keybind Created');
 
       console.log(createMacro);
     } catch (error) {
@@ -17,8 +19,7 @@ class MacrosController {
       });
 
       let object = JSON.stringify(all);
-      console.log('::::: Keybind Created :::::');
-      window.alert('Keybind Created');
+      
 
       return object;
     } catch (error) {
