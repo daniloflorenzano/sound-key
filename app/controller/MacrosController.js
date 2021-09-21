@@ -26,4 +26,16 @@ class MacrosController {
       console.log(error);
     }
   }
+
+  static async delete(keybindName) {
+    try {
+      await Macros.destroy({
+        where: {
+          name: keybindName
+        }
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
