@@ -1,4 +1,4 @@
-<h1 align="center"> :notes: <a href="#"> SOUND KEY </a> </h1>
+<h1 align="center"> :musical_keyboard: <a href="#"> SOUND KEY </a> </h1>
 
 <h3 align="center"> Play the audio you want by pressing a single key </h3>
 
@@ -40,8 +40,9 @@ play some sound effects in live. Use your imagination!
 
 - [x]  Database integrated ( your keybinds will won't desapear after you close the app! )
 - [x]  Always running ( the app still works even if you minimize the window )
-- [ ]  Showing your keybinds ( there's a dinamic table that shows the keybinds you already setted )
-- [ ]  Delete the unwanted ( delete that keybind you don't want anymore )
+- [x]  Showing your keybinds ( there's a dinamic table that shows the keybinds you already setted )
+- [x]  Delete the unwanted ( delete that keybind you don't want anymore )
+- [ ]  Dark mode
 
 ---
 
@@ -93,8 +94,6 @@ $ npm start
 - Now click the "play" button. A tiny window should open, and that means your keyboard is been listen by the app. **Test your keybind!**
 
 - To stop the app, click the "stop" button
-
-*By now, the app doesn't have a visual confirmation that your keybind has been saved. But I will solve this soon!*
 
 ---
 
