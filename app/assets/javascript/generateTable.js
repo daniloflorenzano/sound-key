@@ -1,7 +1,11 @@
 const tableBody = document.querySelector('tbody');
+
 const edit = `<button class="btn btn-danger deleteButton">
  <span class="material-icons">delete_forever</span> 
  </button>`;
+
+ const nameText = `<p> ${dataContent.name} </p>`;
+ const keyText = `<p> ${dataContent.key} </p>`;
 
 
 async function generateTable() {
@@ -28,11 +32,9 @@ async function updateTable() {
         // let nameText = document.createTextNode(dataContent.name);
         // let keyText = document.createTextNode(dataContent.key);
         editSpace.innerHTML = edit;
-        nameSpace.innerHTML = `<p> ${dataContent.name} </p>`
-        associatedKeySpace.innerHTML = `<p> ${dataContent.key} </p>`
+        nameSpace.innerHTML = nameText;
+        associatedKeySpace.innerHTML = keyText;
 
-        // nameSpace.appendChild(nameText);
-        // associatedKeySpace.appendChild(keyText);
         line.appendChild(nameSpace);
         line.appendChild(associatedKeySpace);
         line.appendChild(editSpace);
