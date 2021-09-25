@@ -1,5 +1,7 @@
 const tableBody = document.querySelector('tbody');
-const edit = '<button class="btn btn-danger deleteButton"> Delete </button>';
+const edit = `<button class="btn btn-danger deleteButton">
+ <span class="material-icons">delete_forever</span> 
+ </button>`;
 
 
 async function generateTable() {
@@ -16,24 +18,26 @@ async function updateTable() {
     const keybindsObj = JSON.parse(keybindsString)
 
     for (let i = 0; i < keybindsObj.length; i++) {
-    dataContent = keybindsObj[i];
+        dataContent = keybindsObj[i];
 
-    let line = document.createElement('tr');
-    let nameSpace = document.createElement('td')
-    let associatedKeySpace = document.createElement('td')
-    let editSpace = document.createElement('td')
+        let line = document.createElement('tr');
+        let nameSpace = document.createElement('td')
+        let associatedKeySpace = document.createElement('td')
+        let editSpace = document.createElement('td')
 
-    let nameText = document.createTextNode(dataContent.name);
-    let keyText = document.createTextNode(dataContent.key);
-    editSpace.innerHTML = edit;
+        // let nameText = document.createTextNode(dataContent.name);
+        // let keyText = document.createTextNode(dataContent.key);
+        editSpace.innerHTML = edit;
+        nameSpace.innerHTML = `<p> ${dataContent.name} </p>`
+        associatedKeySpace.innerHTML = `<p> ${dataContent.key} </p>`
 
-    nameSpace.appendChild(nameText);
-    associatedKeySpace.appendChild(keyText);
-    line.appendChild(nameSpace);
-    line.appendChild(associatedKeySpace);
-    line.appendChild(editSpace);
+        // nameSpace.appendChild(nameText);
+        // associatedKeySpace.appendChild(keyText);
+        line.appendChild(nameSpace);
+        line.appendChild(associatedKeySpace);
+        line.appendChild(editSpace);
 
-    tableBody.appendChild(line);
+        tableBody.appendChild(line);
     }
 }
 

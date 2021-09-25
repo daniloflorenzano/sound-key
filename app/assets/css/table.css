@@ -1,0 +1,15 @@
+.deleteButton {
+    height: 2rem;
+    width: 2rem;
+    padding: 3px 0 0 0;
+}
+/* 
+.table td {
+    padding-top: 12px;
+} */
+
+.table p {
+    margin: 0;
+    height: 2rem;
+    padding-top: 3px;
+}

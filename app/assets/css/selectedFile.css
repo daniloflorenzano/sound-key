@@ -1,0 +1,9 @@
+.selectedFile {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.selectedFile p {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6);
+}
