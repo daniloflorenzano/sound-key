@@ -69,7 +69,7 @@ ipcMain.on('openHelpWindow', () => {
     if(helpWindow == null) {
         helpWindow = new BrowserWindow({
             width: 250,
-            height: 170,
+            height: 200,
             alwaysOnTop: true,
             parent: win,
             modal: true,

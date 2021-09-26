@@ -1,4 +1,4 @@
-const { shell } = require("electron");
+const { shell } = require('electron');
 
 const instructions = document.querySelector('#instructions');
 const report = document.querySelector('#report');
