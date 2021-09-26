@@ -6,7 +6,7 @@ const about = document.querySelector('#about');
 const contact = document.querySelector('#contact');
 
 instructions.addEventListener('click', () => {
-    shell.openExternal('https://github.com/daniloflorenzano/sound-key#how-it-works')
+    shell.openExternal('https://github.com/daniloflorenzano/sound-key/blob/main/README.md#how-it-works')
 })
 
 report.addEventListener('click', () => {
