@@ -94,8 +94,9 @@ $ npm start
 <img width="600"  src="assets/demonstration.gif">
 
 - Now click the "play" button. A tiny window should open, and that means your keyboard is been listen by the app. **Test your keybind!**
-
 - To stop the app, click the "stop" button
+
+<img width="600"  src="assets/playing.gif">
 
 ---
 
