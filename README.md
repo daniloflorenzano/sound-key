@@ -48,7 +48,17 @@ play some sound effects in live. Use your imagination!
 
 ---
 
-## Installing Sound Key
+## Installing Sound Key as a executable (.exe)
+
+Download the best installer for your operational system: 
+
+[Windows x64](https://mega.nz/file/afYDCQ4S#wHXvVBlLlFooPCamyPwAauOYjsHM7LuROestjQqZypE)
+
+[Windows x86](https://mega.nz/file/7DYVwACK#GI55twUyuatiFWD7XU6u5ouRCXUHrkxHUS4WiZOHRm4)
+
+---
+
+## Installing Sound Key as a project 
 
 It is very simple, just follow the steps and you be okay!
 
