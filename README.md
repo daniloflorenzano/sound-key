@@ -1,4 +1,6 @@
-<h1 align="center"> :musical_keyboard: <a href="#"> SOUND KEY </a> </h1>
+<h1 align="center">
+    <img alt="Sound Key" title="#Sound Key" src="./assets/banner.png" />
+</h1>
 
 <h3 align="center"> Play the audio you want by pressing a single key </h3>
 
