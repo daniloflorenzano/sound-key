@@ -1,6 +1,6 @@
 function addEvent(id) {
     document.querySelector(`#${id}`).addEventListener('click', function (event) {
-        let name = event.target.parentNode.parentNode.firstChild.textContent;
+        let name = event.target.parentNode.parentNode.parentNode.firstChild.textContent;
 
         deleteKeyBind(name);
         generateTable();
