@@ -62,4 +62,31 @@ ipcMain.on('closePlayWindow', () => {
     playWindow.close();
 })
 
+let helpWindow = null;
+
+ipcMain.on('openHelpWindow', () => {
+
+    if(helpWindow == null) {
+        helpWindow = new BrowserWindow({
+            width: 250,
+            height: 170,
+            alwaysOnTop: true,
+            parent: win,
+            modal: true,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false,
+            }
+        })
+
+        helpWindow.on('closed', () => {
+            helpWindow = null;
+        })
+    }
+
+    helpWindow.loadURL(`file://${__dirname}/app/view/helpWindow.html`)
+    
+    helpWindow.setMenuBarVisibility(false);
+})
+
 app.allowRendererProcessReuse = false;
