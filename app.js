@@ -20,6 +20,8 @@ app.on('ready', () => {
         }
     });
 
+    win.setMenuBarVisibility(false);
+
     win.loadURL(`file://${__dirname}/app/view/index.html`);
 })
 
